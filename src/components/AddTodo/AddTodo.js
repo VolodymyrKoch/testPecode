@@ -8,6 +8,7 @@ function AddTodo({ onCreate }) {
 
   function submitHandler(event) {
     event.preventDefault();
+    console.log('event', event);
     if (value.trim()) {
       onCreate(value);
       setValue('');

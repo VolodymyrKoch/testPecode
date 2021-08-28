@@ -40,3 +40,9 @@
 .filter__item:not(:last-child) {
   margin-right: 8px;
 }
+
+.characterslist {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5px;
+}

@@ -1,0 +1,23 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  z-index: 1;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modalBody {
+  position: absolute;
+  padding: 20px;
+  width: 700px;
+  border-radius: 5px;
+  background: #ccc;
+  height: 400px;
+  transform: translateY(0%) scale(1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
