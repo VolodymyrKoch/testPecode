@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import Context from '../../context.js';
+import AddTodo from '../../components/AddTodo/AddTodo.js';
 import Header from '../../components/Header/Header.js';
 import TodoItem from '../../components/TodoItem/TodoItem.js';
 
@@ -32,13 +33,26 @@ function MyWatchListPage() {
   function removeTodo(id) {
     setTodos(todos.filter(todo => todo.id !== id));
   }
+
+  function addTodo(title) {
+    setTodos(
+      todos.concat([
+        {
+          id: Date.now(),
+          completed: false,
+          title,
+        },
+      ]),
+    );
+  }
   return (
     <Context.Provider value={{ removeTodo }}>
       <React.Fragment>
         <div className={styles.header}>
           <Header></Header>
         </div>
-        <ol>
+        <AddTodo onCreate={addTodo}></AddTodo>
+        <ol className={styles.todolist}>
           {todos.length ? (
             todos.map((todo, index) => {
               return (

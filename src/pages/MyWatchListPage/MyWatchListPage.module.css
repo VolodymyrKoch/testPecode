@@ -2,3 +2,7 @@
   border-bottom: 1px solid #cac1c1;
   position: relative;
 }
+.todolist {
+  width: 50%;
+  margin-top: 20px;
+}

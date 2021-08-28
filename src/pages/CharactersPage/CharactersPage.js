@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header/Header.js';
 
@@ -6,6 +7,11 @@ import styles from './CharactersPage.module.css';
 // import sprite from '../../assets/img/sprite.svg';
 
 function CharactersPage() {
+  // useEffect(() => {
+  //   fetch('https://')
+  //     .then(response => response.json())
+  //     .then(json => console.log(json));
+  // }, []);
   return (
     <React.Fragment>
       <div className={styles.header}>
