@@ -10,6 +10,7 @@
   padding-top: 50px;
   z-index: 1;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
 }
 .modalBody {
   position: absolute;
@@ -17,7 +18,50 @@
   width: 700px;
   border-radius: 5px;
   background: #ccc;
-  height: 400px;
+  min-height: 400px;
   transform: translateY(0%) scale(1);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.strikeOut:hover,
+.strikeOut:focus,
+.close:hover,
+.close:focus {
+  color: #ffffff;
+  background-color: #f32167;
+}
+
+.close {
+  margin: 20px 0;
+}
+
+.strikeOut {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.cardImage {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  width: 200px;
+  margin-right: 30px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.description {
+  margin-right: 30px;
+}
+
+.link {
+  margin-right: 20px;
+}
+
+.link p {
+  display: inline-flex;
 }
