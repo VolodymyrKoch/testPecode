@@ -11,6 +11,7 @@ import styles from './CharactersPage.module.css';
 
 function CharactersPage() {
   const [characters, setCharacters] = React.useState('');
+  const [currentCharacter, setCcurrentCharacter] = React.useState(null);
   const [loader, setLoader] = React.useState(true);
 
   // const { info, results } = characters;
@@ -34,10 +35,11 @@ function CharactersPage() {
   // console.log('keyss', keyss);
   // console.log('characters.results.length', characters.results.length);
 
-  // function curentItem(id) {
-  //   characters.filter(character => character.id === id);
-  // }
-
+  function currentItem(id) {
+    console.log('id', id);
+    setCcurrentCharacter(characters.filter(character => character.id === id));
+  }
+  console.log(currentItem);
   return (
     <React.Fragment>
       <div className={styles.header}>
@@ -58,9 +60,7 @@ function CharactersPage() {
           </li>
         </ul>
       )}
-      <Modal
-      // open={onToggle}
-      ></Modal>
+      <Modal open={currentCharacter}></Modal>
 
       <ul className={styles.characterslist}>
         {!loader && characters.length ? (
@@ -70,7 +70,7 @@ function CharactersPage() {
                 character={character}
                 key={character.id}
                 index={index}
-                // onChange={curentItem}
+                openModal={currentItem}
               />
             );
           })

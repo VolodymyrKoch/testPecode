@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Modal.module.css';
 
-function Modal({open}) {
-  const [isOpen, setIsOpen] = React.useState(false);
+function Modal({ open }) {
+  const [isOpen, setIsOpen] = React.useState(null);
 
-  if(open){setIsOpen(open)}
-  
+  useEffect(() => {
+    if (open) {
+      setIsOpen(open);
+      console.log('isOpen', isOpen);
+    }
+  }, [open]);
+
   return (
     <React.Fragment>
-      <button onClick={() => setIsOpen(true)}>Open Modal</button>
+      {/* <button onClick={() => setIsOpen(true)}>Open Modal</button>  */}
 
-      {isOpen && (
+      {!!isOpen && (
         <div className={styles.modal}>
           <div className={styles.modalBody}>
             <h1>title</h1>

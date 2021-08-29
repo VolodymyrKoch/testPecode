@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import styles from './CharacterItem.module.css';
 // import sprite from '../../assets/img/sprite.svg';
 
-function CharacterItem({ character, index, curentItem }) {
+function CharacterItem({ character, index, openModal }) {
   return (
     <>
       <li className={styles.characterItem}>
-        <button
-        // onClick={() => curentItem(character.id)}
-        >
+
+        <button onClick={() => openModal(character.id) }>
+
           <div className={styles.cardImage}>
             <img src={character.image} alt={character.name} />
             <div className={styles.floatingText}>
