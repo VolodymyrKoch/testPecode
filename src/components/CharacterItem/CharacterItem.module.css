@@ -5,12 +5,12 @@
 }
 
 .characterItem {
-  width: calc((100% - 95px) / 4);
+  width: calc((100% - 130px) / 5);
 }
-.characterItem:not(:nth-child(4n)) {
+.characterItem:not(:nth-child(5n)) {
   margin-right: 30px;
 }
-.characterItem:not(:nth-last-child(-n + 4)) {
+.characterItem:not(:nth-last-child(-n + 5)) {
   margin-bottom: 30px;
 }
 
