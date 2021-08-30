@@ -2,3 +2,25 @@
   border-bottom: 1px solid #cac1c1;
   position: relative;
 }
+
+.episodeslist {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5px;
+}
+
+.pagination {
+  width: 300px;
+  margin: 30px auto;
+}
+.prev {
+  width: 100px;
+  height: 35px;
+  margin-right: 50px;
+  background-color: rgb(236, 173, 173);
+}
+.next {
+  width: 100px;
+  height: 35px;
+  background-color: rgb(136, 221, 103);
+}
